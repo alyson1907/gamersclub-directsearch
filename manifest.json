@@ -6,24 +6,12 @@
   "permissions": [
     "tabs"
   ],
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.steamcommunity.com/id/*",
-        "*://*.steamcommunity.com/profiles/*"
-      ],
-      "js": [
-        "search.js"
-      ],
-      "run_at": "document_end"
-    }
-  ],
   "page_action": {
     "default_icon": "fav.ico",
     "default_popup": "index.html",
     "default_title": "GC-DirectSearch"
   },
   "background": {
-    "scripts": []
+    "scripts": ["directSearch.js"]
   }
 }
