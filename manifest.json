@@ -17,8 +17,6 @@
     "default_title": "GC-DirectSearch"
   },
   "background": {
-    "scripts": [
-      "directSearch.js"
-    ]
+    "page": "background.html"
   }
 }
