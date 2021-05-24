@@ -12,7 +12,7 @@
     "page": "popup.html"
   },
   "browser_action": {
-    "default_icon": "fav.ico",
+    "default_icon": "assets/favicon.ico",
     "default_popup": "popup.html",
     "default_title": "GC-DirectSearch"
   },
