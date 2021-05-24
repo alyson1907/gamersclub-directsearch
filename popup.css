@@ -1,12 +1,11 @@
 body {
   display: flex;
   flex: 1;
-  background-color: aqua;
+  flex-direction: column;
 }
 
-.activate-wrapper {
+#activate-btn {
   display: flex;
   flex: 1;
-  flex-direction: row;
   border: 3px solid black;
 }

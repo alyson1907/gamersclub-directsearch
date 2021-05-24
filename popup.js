@@ -1,11 +1,21 @@
+function updateActivationBtn() {
+  const btn = document.getElementById('activate-btn')
+  getStorage(activatedKey, function (state = {}) {
+    const prev = state[activatedKey] || false
+    btn.innerText = prev ? 'Extensão ativada!' : 'Ativar extensão'
+  })
+}
+
 function toggleExtensionActivation () {
-  getStorage(activatedKey, function (value) {
-    const state = value || false
-    console.log(state)
-    setStorage(activatedKey, !state[activatedKey], function () { })
+  getStorage(activatedKey, function (state = {}) {
+    const prev = state[activatedKey] || false
+    setStorage(activatedKey, !prev, function () { })
+    updateActivationBtn()
   })
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('activate-btn').addEventListener('click', toggleExtensionActivation)
+  updateActivationBtn()
+  const activateBtn = document.getElementById('activate-btn')
+  activateBtn.addEventListener('click', toggleExtensionActivation)
 })
