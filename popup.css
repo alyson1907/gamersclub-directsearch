@@ -1,0 +1,12 @@
+body {
+  display: flex;
+  flex: 1;
+  background-color: aqua;
+}
+
+.activate-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  border: 3px solid black;
+}
