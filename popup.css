@@ -9,3 +9,21 @@ body {
   flex: 1;
   border: 3px solid black;
 }
+
+#power-button {
+  width: 40px;
+  height: 40px;
+  transition: 0.4s;
+}
+
+.off {
+  filter: saturate(0%);
+}
+
+.on {
+  filter: saturate(100%) 
+}
+
+#power-button:hover {
+  filter: saturate(50%)
+}

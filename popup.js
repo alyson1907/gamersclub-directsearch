@@ -1,8 +1,11 @@
 function updateActivationBtn() {
-  const btn = document.getElementById('activate-btn')
   getStorage(activatedKey, function (state = {}) {
     const prev = state[activatedKey] || false
-    btn.innerText = prev ? 'Extensão ativada!' : 'Ativar extensão'
+    const btn = document.getElementById('power-button')
+    // btn.innerText = prev ? 'Extensão ativada!' : 'Ativar extensão'
+    console.log(btn.className)
+    btn.className = prev ? 'on' : 'off'
+    console.log(btn.className)
   })
 }
 
@@ -16,6 +19,6 @@ function toggleExtensionActivation () {
 
 document.addEventListener('DOMContentLoaded', function () {
   updateActivationBtn()
-  const activateBtn = document.getElementById('activate-btn')
+  const activateBtn = document.getElementById('power-button')
   activateBtn.addEventListener('click', toggleExtensionActivation)
 })
