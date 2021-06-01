@@ -2,6 +2,8 @@ body {
   display: flex;
   flex: 1;
   flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 #activate-btn {
@@ -13,11 +15,11 @@ body {
 #power-button {
   width: 40px;
   height: 40px;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .off {
-  filter: saturate(0%);
+  filter: saturate(0%) opacity(70%);
 }
 
 .on {
@@ -25,5 +27,9 @@ body {
 }
 
 #power-button:hover {
-  filter: saturate(50%)
+  cursor: pointer;
+}
+
+#power-button:active {
+  filter: invert(20%)
 }
