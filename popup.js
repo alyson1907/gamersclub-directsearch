@@ -2,10 +2,7 @@ function updateActivationBtn() {
   getStorage(activatedKey, function (state = {}) {
     const prev = state[activatedKey] || false
     const btn = document.getElementById('power-button')
-    // btn.innerText = prev ? 'Extensão ativada!' : 'Ativar extensão'
-    console.log(btn.className)
     btn.className = prev ? 'on' : 'off'
-    console.log(btn.className)
   })
 }
 
